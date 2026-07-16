@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class reverse{
-    /*public void rvr(int[] arr,int n){
+    public void rvr(int[] arr,int n){
         int[] a=new int[n];
         for(int i=n;i>0;i--){
             a[n-i]=arr[i-1];
@@ -10,7 +10,8 @@ class reverse{
             System.out.print(a[i]+",");
         }
         System.out.println("]");
-    }*/
+    }
+   //Fraud Method
     /*public void rvr(int[] arr,int n){
         for(int i=n-1;i>=0;i--){
             if(i==n-1) System.out.print("[");
@@ -20,7 +21,8 @@ class reverse{
             if(i==0) System.out.print("]");
         }
     }*/
-    public void rvr(int[] arr,int n){
+   // 2 pointer 
+    /*public void rvr(int[] arr,int n){
         int left=0,right=n-1;
         while(left<right){
             int temp=arr[left];
@@ -30,13 +32,14 @@ class reverse{
             right--;
         }
         int i=0;
-        System.out.println("[");
+        System.out.print("[");
         while(i<n){
             System.out.print(arr[i]+" ");
             i++;
         }
         System.out.println("]");
-    }
+    }*/
+
     public static void main(String[] args){
         Scanner sc= new Scanner(System.in);
         int n=sc.nextInt();
