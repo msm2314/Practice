@@ -1,7 +1,33 @@
 import java.util.*;
 
 class Order123 {
-    public void sort(int[] arr) {
+    public void swap(int[] arr, int a, int b) {
+        int temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
+    }
+    public void sort(int[] arr) {{
+        int n=arr.length;
+        int low=0,high=n-1,mid=0;
+        while (mid <= high) {
+            if(arr[mid]==0){
+                swap(arr,mid,low);
+                low++;
+                mid++;
+            }
+            else if(arr[mid]==1){
+                mid++;
+            }
+            else{
+                swap(arr,mid,high);
+                high--;
+            }
+        }
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+    /*public void sort(int[] arr) {
         int c0=0,c1=0,c2=0;
         int n=arr.length;
         for(int i=0;i<n;i++){
