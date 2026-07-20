@@ -51,3 +51,29 @@ public class UnionIntersection {
         d.union(arr1,arr2);
     }
 }
+
+
+/*
+public void union(int[] arr1, int[] arr2) {
+
+        ArrayList<Integer> ans = new ArrayList<>();
+
+        // Add unique elements from arr1
+        for (int i = 0; i < arr1.length; i++) {
+
+            if (!ans.contains(arr1[i])) {
+                ans.add(arr1[i]);
+            }
+        }
+
+        // Add unique elements from arr2
+        for (int i = 0; i < arr2.length; i++) {
+
+            if (!ans.contains(arr2[i])) {
+                ans.add(arr2[i]);
+            }
+        }
+
+        System.out.println("Union = " + ans);
+        System.out.println("Count = " + ans.size());
+    } */
