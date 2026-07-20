@@ -1,6 +1,6 @@
 import java.util.*;
 public class UnionIntersection {
-    public void rr(int[] arr1,int[] arr2){
+    public void intersection(int[] arr1,int[] arr2){
         Set<Integer> ss=new HashSet<>();
         int n1=arr1.length;
         int n2=arr2.length;
@@ -14,6 +14,24 @@ public class UnionIntersection {
         }
         System.out.println(ss);
     }
+    public void union(int[] arr1,int[] arr2){
+        Set<Integer> ss=new HashSet<>();
+        for(int nums:arr1) ss.add(nums);
+        for(int nums:arr2) ss.add(nums);
+        System.out.println(ss);
+    }
+    /*public void union(int[] arr1,int[] arr2){
+        Set<Integer> ss=new HashSet<>();
+        for(int nums:arr1){
+            ss.add(nums);
+        }
+        Set<Integer> ss1=new HashSet<>();
+        for(int nums:arr2){
+        if(ss.contains(nums)){
+            ss1.add(nums);
+        }
+        }
+    } */
     public static void main(String[] args){
         Scanner sc= new Scanner(System.in);
         System.out.println("n1:");
@@ -29,6 +47,7 @@ public class UnionIntersection {
             arr2[i]=sc.nextInt();
         }
         UnionIntersection d=new UnionIntersection();
-        d.rr(arr1,arr2);
+        d.intersection(arr1,arr2);
+        d.union(arr1,arr2);
     }
 }
