@@ -24,7 +24,7 @@ public class UnionIntersection {
         Set<Integer> ss=new HashSet<>();
         for(int nums:arr1){
             ss.add(nums);
-        }
+        }/
         Set<Integer> ss1=new HashSet<>();
         for(int nums:arr2){
         if(ss.contains(nums)){
