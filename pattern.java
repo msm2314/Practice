@@ -2,8 +2,29 @@ import java.util.*;
 class pattern{
 public static void main(String args [])
 {
-    int n=1;
-    String nn="Shreyas";
-    System.out.println("My "+ n +" Name "+nn);
+    int n=5;
+    int[] nums=new int[n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n-i+1;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+    }
 }
 }
+/* 
+     *****
+    *****
+   *****
+  *****
+ *****
+for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            System.out.print(" ");
+        }
+        for(int ns:nums){
+            System.out.print("*");
+        }
+        System.out.println();
+    } */

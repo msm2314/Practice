@@ -3,20 +3,21 @@ import java.util.*;
 public class RemoveDuplicates {
 
     public int rd(int[] nums) {
-        int i = 0;
-        for (int j = 1; j < nums.length; j++) {
-
-            if (nums[i] != nums[j]) {
-                i++;
-                nums[i] = nums[j];
+        int left=0,left1=0;
+        int n=nums.length;
+        Arrays.sort(nums);
+        while(left1<n){
+            if(nums[left1]!=nums[left]){
+                left++;
+                nums[left]=nums[left1];
+                left1++;
             }
-
+            left1++;
         }
-        for (int num : nums) {
-            System.out.print(num + " ");
+        for(int num:nums){
+            System.out.print(num+",");
         }
-        System.out.println();
-        return i + 1;
+        return left+1;
     }
 
     public static void main(String[] args) {
