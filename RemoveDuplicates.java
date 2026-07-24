@@ -3,21 +3,20 @@ import java.util.*;
 public class RemoveDuplicates {
 
     public int rd(int[] nums) {
-        int left=0,left1=0;
+        int i=0,j=0;
         int n=nums.length;
         Arrays.sort(nums);
-        while(left1<n){
-            if(nums[left1]!=nums[left]){
-                left++;
-                nums[left]=nums[left1];
-                left1++;
+        while(j<n){
+            if(nums[j]!=nums[i]){
+                i++;
+                nums[i]=nums[j];
             }
-            left1++;
+            j++;
         }
         for(int num:nums){
             System.out.print(num+",");
         }
-        return left+1;
+        return i+1;
     }
 
     public static void main(String[] args) {
@@ -32,19 +31,16 @@ public class RemoveDuplicates {
         System.out.println("Unique elements = " + k);
     }
 }
-/*class Solution {
+class Solution {
     public int removeDuplicates(int[] nums) {
-        LinkedHashSet<Integer> set = new LinkedHashSet<>();
-
-        for (int num : nums) {
-            set.add(num);
+        int i=0,j=0;
+        while(j<nums.length){
+            if(nums[j]!=nums[i]){
+                i++;
+                nums[i]=nums[j];
+            }
+            j++;
         }
-
-        int i = 0;
-        for (int num : set) {
-            nums[i++] = num;
-        }
-
-        return set.size();
-    }
-} */
+        return i+1;
+    } 
+}
