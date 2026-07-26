@@ -2,15 +2,7 @@
 import java.util.*;
 public class BuySellStock {
     public int remove(int[] nums, int n) {
-        int maxi=0;
-        for(int i=0;i<n;i++){
-            for(int j=i+1;j<n;j++){
-                if(nums[j]-nums[i]>maxi){
-                    maxi=Math.max(maxi,nums[j]-nums[i]);
-                }
-            }
-        }
-        return maxi;
+        int n=nums.length;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -24,3 +16,16 @@ public class BuySellStock {
         System.out.println("Maximum:"+element);
     }
 }
+/*Brute force
+public int remove(int[] nums, int n) {
+        int maxi=0;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(nums[j]-nums[i]>maxi){
+                    maxi=Math.max(maxi,nums[j]-nums[i]);
+                }
+            }
+        }
+        return maxi;
+    }
+*/
