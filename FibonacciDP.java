@@ -1,6 +1,6 @@
 import java.util.*;
 public class FibonacciDP {
-    /*public int fibtopdown(int[] dp,int n){
+    public int fibtopdown(int[] dp,int n){
         if(n<=1) return n;
         if(dp[n]!=-1) return dp[n];
         dp[n]= fibtopdown(dp,n-1)+ fibtopdown(dp,n-2);
@@ -16,7 +16,7 @@ public class FibonacciDP {
             dp[i]=dp[i-1]+dp[i-2];
         }
         return dp[n];
-    }*/
+    }
     public int fibspacecomplex(int n){
         if(n<=1){
             return n;
@@ -31,13 +31,13 @@ public class FibonacciDP {
         return prev1;
         
     }
-    public static void main(String [] args){
+    /*public static void main(String [] args){
         Scanner sc=new Scanner (System.in);
         int n=sc.nextInt();
         FibonacciDP fdp=new FibonacciDP();
         int n1=fdp.fibspacecomplex(n);
         System.err.println(n1);
-    }
+    }*/
     /*public static void main(String [] args){
         Scanner sc=new Scanner (System.in);
         int n=sc.nextInt();
@@ -47,5 +47,12 @@ public class FibonacciDP {
         int n1=fdp.fibbottomup(dp,n);
         System.err.println(n1);
     }*/
+   public static void main(String [] args){
+        Scanner sc=new Scanner (System.in);
+        int n=sc.nextInt();
+        int[] dp=new int[n+1];
+        FibonacciDP fdp=new FibonacciDP();
+        int n1=fdp.fibbottomup(dp,n);
+        System.err.println(n1);
+    }
 }
-// 0 1 1 2 3 5 8 13 21
