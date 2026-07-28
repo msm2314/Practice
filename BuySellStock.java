@@ -2,7 +2,7 @@
 import java.util.*;
 public class BuySellStock {
     public int remove(int[] nums, int n) {
-        int n=nums.length;
+        return ;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
