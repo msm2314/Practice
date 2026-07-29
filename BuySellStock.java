@@ -15,7 +15,7 @@ public class BuySellStock {
         System.out.println("Maximum:"+element);
     }
 }
-/*Brute force
+/*Brute force Approach
 public int remove(int[] nums, int n) {
         int maxi=0;
         for(int i=0;i<n;i++){
